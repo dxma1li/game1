@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<!-- Google tag (gtag.js) -->
+	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-0BPGT0TFKV"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -11,23 +11,26 @@
 
   gtag('config', 'G-0BPGT0TFKV');
 </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Showcase</title>
+  <style>
+    /* 整体布局 */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: rgb(0, 183, 250);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-<meta http-equiv="X-Frame-Options"content="SAMEORIGIN / DENY ">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GirlGameZone 风格模板</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
+    header {
             background-color: #333;
             color: white;
             text-align: center;
+            width: 100%;
             padding: 20px 0;
         }
 
@@ -35,82 +38,252 @@
             margin: 0;
         }
 
-       .game-categories {
-            padding: 20px;
-        }
+    /* 游戏卡片容器 */
+   .game-container {
+      width: 100%;
+      max-width: 1400px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-       .game-category {
-            margin-bottom: 20px;
-        }
+    /* 游戏卡片样式 */
+   .game-card {
+      width: calc(25% - 30px);
+      margin: 15px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      border-radius: 5px;
+      overflow: hidden;
+    }
 
-       .game-category h2 {
-            margin-top: 0;
-        }
+   .game-img {
+      width: 100%;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+    }
 
-       .game-list {
-            list-style-type: none;
-            padding: 0;
-        }
+   .game-title {
+      margin: 10px;
+      font-size: 18px;
+    }
 
-       .game-item {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
+   .game-price {
+      margin: 10px;
+      color: #f00;
+      font-weight: bold;
+    }
 
-       .game-item a {
-            text-decoration: none;
-            color: #333;
-        }
+   .game-discount {
+      margin: 10px;
+      color: #666;
+      text-decoration: line-through;
+      font-size: 14px;
+    }
 
-       .game-item:hover {
-            background-color: #f9f9f9;
-        }
-    </style>
+   .game-desc {
+      margin: 10px;
+      font-size: 14px;
+      color: #333;
+    }
+
+   .game-genre {
+      margin: 10px;
+      color: #666;
+      font-size: 12px;
+    }
+
+    /* 响应式布局 */
+    @media (max-width: 1200px) {
+     .game-card {
+        width: calc(33.333% - 30px);
+      }
+    }
+
+    @media (max-width: 992px) {
+     .game-card {
+        width: calc(50% - 30px);
+      }
+    }
+
+    @media (max-width: 768px) {
+     .game-card {
+        width: calc(100% - 30px);
+      }
+    }
+  </style>
 </head>
-
-<body>
-    <header>
-        <h1>GirlGameZone</h1>
-        <h2>The Ultimate Gaming Paradise for Girls</h2>
+ <header>
+        <h1>Gamesilo
+</h1>
+         <h2>Feel free to enjoy games on our site!</h2>
     </header>
-    <div class="game-categories">
-        <div class="game-category">
-            <h2>Game Categories</h2>
-            <ul class="game-list">
-			
-                <li class="game-item">
-            <iframe id="game_drop" src="https://html-classic.itch.zone/html/13624147/index.html" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share"></iframe>
-                </li>
-                <li class="game-item"><a href="#">The Ink Studio</a></li>
-                <li class="game-item"><a href="#">College Girls Team Makeover</a></li>
-                <!-- 按照原网站依次添加更多游戏项目 -->
-            </ul>
-        </div>
+<body>
+
+  <div class="game-container">
+    <!-- 游戏卡片1 -->
+    <div class="game-card">
+       <a href="games/game1.html">
+      <div class="game-img" style="background-image: url('image/game1.png')"></div>
+      <h2 class="game-title">RAVEN-STAR</h2>
+      </a>
+      <p class="game-desc">A Game Boy Color game called RAVEN-STAR.</p>
+      <p class="game-genre">Platformer</p>
     </div>
 
-	<div id="disqus_thread"></div>
-<script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
-    
-    var disqus_config = function () {
-    this.page.url = "https://dxma1ligame1.vercel.app/";  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = "8ec5a820"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-    
-    (function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://game1-3.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <!-- 游戏卡片2 -->
+    <div class="game-card">
+       <a href="games/game2.html">
+      <div class="game-img" style="background-image: url('image/game2.png')"></div>
+      <h2 class="game-title">Midnight Mansion</h2>
+      </a>
+      <p class="game-desc">Agent Milla Yang is sent to investigate a series of murders</p>
+      <p class="game-genre">Adventure</p>
+    </div>
+
+    <!-- 游戏卡片3 -->
+     <div class="game-card">
+       <a href="games/game3.html">
+      <div class="game-img" style="background-image: url('image/game3.png')"></div>
+      <h2 class="game-title">PEREELOUS</h2>
+      </a>
+      <p class="game-desc">SPIN YOUR WAY THROUGH THIS UNIQUE ROGUELIKE GAME</p>
+      <p class="game-genre">Adventure</p>
+    </div>
+
+    <!-- 游戏卡片4 -->
+     <div class="game-card">
+       <a href="games/game4.html">
+      <div class="game-img" style="background-image: url('image/game4.png')"></div>
+      <h2 class="game-title">Shleep</h2>
+      </a>
+      <p class="game-desc">Trouble falling asleep? Let’s count some sheep together!</p>
+      <p class="game-genre">Simulation</p>
+    </div>
+
+    <!-- 游戏卡片5 -->
+    <div class="game-card">
+       <a href="games/game5.html">
+      <div class="game-img" style="background-image: url('image/game5.png')"></div>
+      <h2 class="game-title">God-veins</h2>
+      </a>
+      <p class="game-desc">Be the leader of an expedition in search of God. Manage your resources and make wise decisions to guide your crew to victory</p>
+      <p class="game-genre">Survival</p>
+    </div>
+
+    <!-- 游戏卡片6 -->
+    <div class="game-card">
+       <a href="games/game6.html">
+      <div class="game-img" style="background-image: url('image/game6.png')"></div>
+      <h2 class="game-title">inCARceration</h2>
+      </a>
+      <p class="game-desc">You're stuck in your car thanks to America's messed-up legal system, and your only way out is to earn parole. How? By completing a bunch of weird, surreal jobs, of course!</p>
+      <p class="game-genre">Adventure</p>
+    </div>
+
+    <!-- 游戏卡片7 -->
+   <div class="game-card">
+       <a href="games/game7.html">
+      <div class="game-img" style="background-image: url('image/game7.png')"></div>
+      <h2 class="game-title">SYNTAXIA</h2>
+      </a>
+      <p class="game-desc">You waking up from a deep coma，disoriented and alone, trapped in a dilapidated complex</p>
+      <p class="game-genre">Survival</p>
+    </div>
+
+    <!-- 游戏卡片8 -->
+    <div class="game-card">
+       <a href="games/game8.html">
+      <div class="game-img" style="background-image: url('image/game8.png')"></div>
+      <h2 class="game-title">Solitomb</h2>
+      </a>
+      <p class="game-desc">You are an adventurer who entered into a pact with a demon.</p>
+      <p class="game-genre">Strategy</p>
+    </div>
+
+    <!-- 游戏卡片9 -->
+    <div class="game-card">
+       <a href="games/game9.html">
+      <div class="game-img" style="background-image: url('image/game9.png')"></div>
+      <h2 class="game-title">Tiny-hamsters</h2>
+      </a>
+      <p class="game-desc">You are tiny hamsters surviving in a post-apocalyptic world.</p>
+      <p class="game-genre">Strategy</p>
+    </div>
+
+     <!-- 游戏卡片10 -->
+    <div class="game-card">
+       <a href="games/game10.html">
+      <div class="game-img" style="background-image: url('image/game10.png')"></div>
+      <h2 class="game-title">Pillow Fight</h2>
+      </a>
+      <p class="game-desc">A game about sleep</p>
+      <p class="game-genre">Strategy</p>
+    </div>
+
+    <!-- 游戏卡片11 -->
+    <div class="game-card">
+       <a href="games/game11.html">
+      <div class="game-img" style="background-image: url('image/game11.png')"></div>
+      <h2 class="game-title">Vortexion</h2>
+      </a>
+      <p class="game-desc">Vortexion is a short MSX/SG-1000 inspired shooter.</p>
+      <p class="game-genre">Shooter</p>
+    </div>
+
+    <!-- 游戏卡片12 -->
+    <div class="game-card">
+       <a href="games/game12.html">
+      <div class="game-img" style="background-image: url('image/game12.png')"></div>
+      <h2 class="game-title">Super-dassalo-land</h2>
+      </a>
+      <p class="game-desc">Tommy Dassalo was knee-deep in the final stretch of preparations for the biggest comedy event of the century</p>
+      <p class="game-genre">Action</p>
+    </div>
+
+     <!-- 游戏卡片13 -->
+    <div class="game-card">
+       <a href="games/game13.html">
+      <div class="game-img" style="background-image: url('image/game13.png')"></div>
+      <h2 class="game-title">Escape From Castle Matsumoto</h2>
+      </a>
+      <p class="game-desc">Medieval Japan. An evil daimyo lord has stolen the treasures of Imperial family and hidden them in his castle in an attempt to seize power. </p>
+      <p class="game-genre">Action</p>
+    </div>
+
+    <!-- 游戏卡片14 -->
+    <div class="game-card">
+       <a href="games/game14.html">
+      <div class="game-img" style="background-image: url('image/game14.png')"></div>
+      <h2 class="game-title">Desierto</h2>
+      </a>
+      <p class="game-desc">This is a game about getting lost.</p>
+      <p class="game-genre">Adventure</p>
+    </div>
+
+    <!-- 游戏卡片15 -->
+    <div class="game-card">
+       <a href="games/game15.html">
+      <div class="game-img" style="background-image: url('image/game15.png')"></div>
+      <h2 class="game-title">Snow-Flow</h2>
+      </a>
+      <p class="game-desc">Waddle through a snowy landscape as a penguin, leaving wobbly silver trails in the frost like stitching diamonds into a blank canvas.</p>
+      <p class="game-genre">Puzzle</p>
+    </div>
+
+     <!-- 游戏卡片16 -->
+    <div class="game-card">
+       <a href="games/game16.html">
+      <div class="game-img" style="background-image: url('image/game16.png')"></div>
+      <h2 class="game-title">Beneath the Waves</h2>
+      </a>
+      <p class="game-desc">Manage your crew and your submarine, survive the onslaught of rocks, enemies, and mines, and collect some treasure chests.</p>
+      <p class="game-genre">Action</p>
+    </div>
+
+  </div>
 </body>
 
 </html>
