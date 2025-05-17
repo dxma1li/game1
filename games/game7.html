@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GameZone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(0, 100, 183);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+       .game-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+       .game-iframe-wrapper {
+            width: 100%;
+            max-width: 800px;
+            height: 75vh;
+            position: relative;
+        }
+
+        #game_drop {
+            width: 100%;
+            height: 100%;
+            border: none;
+            position: relative; /* 改为相对定位 */
+        }
+
+        .fullscreen_btn{display:none}
+        .fullscreen_btn{opacity:.4;position:absolute;bottom:0;right:0;margin:8px;font-size:16px;display:block;transition:opacity 0.4s;background:none;padding:0;border:0;cursor:pointer}
+       .fullscreen_btn img{display:block;width:30px;height:30px}
+       .fullscreen_btn:hover{opacity:.8}
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SYNTAXIA
+</h1>
+         <h2>Feel free to enjoy games on our site!</h2>
+    </header>
+
+        <div class="game-container">
+        <div class="game-iframe-wrapper">
+<iframe id="game_drop" allowtransparency="true" webkitallowfullscreen="true" mozallowfullscreen="true" msallowfullscreen="true" allowfullscreen="true" allow="autoplay; fullscreen *; geolocation; microphone; camera; midi; monetization; xr-spatial-tracking; gamepad; gyroscope; accelerometer; xr; cross-origin-isolated; web-share" scrolling="no" src="https://html-classic.itch.zone/html/12981601/index.html" frameborder="0"></iframe>
+            <button title="Enter fullscreen" class="fullscreen_btn">
+            <img src="https://itch.io/static/images/enlarge.svg?1747110070">
+        </button>
+        </div>
+    </div>
+
+    <div    style="margin: auto; padding: 20px; width: 60%; background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); text-align: center; display: flex; flex-direction:column;justify-content: center; align-items: center;" >
+
+<h1> SYNTAXIA: Reconstructing Destiny in the Fissures of Words and Reality </h1>
+
+
+<h2><p>About
+</p></h2>
+<p>
+You waking up from a deep coma，disoriented and alone, trapped in a dilapidated complex. The air is thick with silence, broken only by the sound of your own heavy breathing. Then, out of the corner of your eye, you notice an old laptop flickering to life. Its cursor blinks rhythmically, as if beckoning you into a world of mystery. Little do you know, this seemingly ordinary device holds the power to shatter your perception of reality—every word you type on it comes to life. This is SYNTAXIA, a dark fantasy adventure game that seamlessly blends the magic of words with thrilling puzzles, challenging you to unleash your creativity and intuition to break free from the clutches of this enigmatic world.</p>
+
+        <h2><p>Features
+</p></h2>
+      </p> Unique reality-bending mechanic. <p>
+ </p> A deep dark atmosphere built with love. <p>
+ </p> Cool RPG mechanics! <p>
+ </p> Three separate skills to level up. <p>
+ </p> A casual, non-combat oriented horor experience. <p>
+ </p> A living, breathing, world, with many secrets to be found. <p>
+ </p> Many items to find within the Komplex. <p>
+ </p> Non-Linear gameplay. <p>
+ </p> Open-ended puzzle design with focus on intuitive solutions. <p>
+    </div>
+    <script>
+        const iframe = document.getElementById('game_drop');
+        const fullscreenBtn = document.querySelector('.fullscreen_btn');
+
+        function requestFullscreen(element) {
+            if (element.requestFullscreen) {
+                element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                element.webkitRequestFullscreen();
+            } else if (element.mozRequestFullScreen) {
+                element.mozRequestFullScreen();
+            } else if (element.msRequestFullscreen) {
+                element.msRequestFullscreen();
+            }
+        }
+
+        fullscreenBtn.addEventListener('click', function () {
+            requestFullscreen(iframe);
+        });
+    </script>
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://game1-3.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</body>
+
+</html>
+
+
